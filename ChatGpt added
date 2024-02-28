@@ -16,7 +16,7 @@ async def on_member_remove(member):
 
 @Bot.command()
 async def kimsin(ctx):
-    await ctx.send("Ben Emrenin Botuyum")
+    await ctx.send("I'am Bot")
     
 def chat_with_gpt(user_message):
     response = openai.ChatCompletion.create(
