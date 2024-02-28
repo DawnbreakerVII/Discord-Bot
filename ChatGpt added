@@ -2,7 +2,7 @@ from Api import *
 
 @Bot.event
 async def on_ready():
-    print("Hazir")
+    print("Ready")
 
 @Bot.event   
 async def on_member_join(member):
