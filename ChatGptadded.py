@@ -1,3 +1,5 @@
+#Firstly pip install openai
+
 from Api import *
 
 @Bot.event
