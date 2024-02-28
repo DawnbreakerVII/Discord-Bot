@@ -15,7 +15,7 @@ async def on_member_remove(member):
     await bchannel.send(f"{member.mention} Sg")
 
 @Bot.command()
-async def kimsin(ctx):
+async def Who(ctx):
     await ctx.send("I'am Bot")
     
 def chat_with_gpt(user_message):
