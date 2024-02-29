@@ -11,7 +11,7 @@ Bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 BotToken = '' #Bot token
 GptToken = '' #OpenAI token
 openai.api_key = GptToken
-
+ 
 @Bot.event
 async def on_ready():
     print("Ready")
