@@ -12,6 +12,10 @@ BotToken = '' #Bot token
 GptToken = '' #OpenAI token
 openai.api_key = GptToken
 
+@Bot.command()
+async def delete(ctx, amount=1):
+    await ctx.channel.purge(limit=amount + 1)
+
 @Bot.event
 async def on_ready():
     print("Ready")
