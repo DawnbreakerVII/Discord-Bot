@@ -6,7 +6,7 @@ async def on_ready():
     await asyncio.gather(update_status())
 
 async def update_status():
-    await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Ceiling"))
+    await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Movie"))
 
 @Bot.event
 async def on_guild_join(guild):
