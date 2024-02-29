@@ -1,5 +1,28 @@
 #Firstly pip install openai
+'''
+def chat_with_gpt(user_message):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": user_message},
+        ],
+    )
+    return response['choices'][0]['message']["content"]
 
+@Bot.event
+async def on_message(message):
+    if message.author == Bot.user:
+        return
+
+    if message.content.startswith('!chat'):
+        user_message = message.content[6:].strip()
+        gpt_response = chat_with_gpt(user_message)
+        await message.channel.send(f'ChatGPT: {gpt_response}')
+
+    await Bot.process_commands(message)
+'''
+#In code     
 from Api import *
 
 @Bot.event
