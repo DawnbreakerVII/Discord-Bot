@@ -20,7 +20,7 @@ async def delete(ctx, amount=1):
 
 @Bot.event
 async def on_ready():
-    print("Hazır")
+    print("Ready!")
     await asyncio.gather(update_status())
 
 async def update_status():
