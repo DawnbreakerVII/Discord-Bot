@@ -1,6 +1,6 @@
 '''
 
-@Bot.command()
+@Bot.command(aliases=['del'])
 async def delete(ctx, amount=1):
     await ctx.channel.purge(limit=amount + 1)
 
@@ -14,7 +14,7 @@ async def on_ready():
 
 from Api import * #Look at the Api.py
 
-@Bot.command()
+@Bot.command(aliases=['del'])
 async def delete(ctx, amount=1):
     await ctx.channel.purge(limit=amount + 1)
 
