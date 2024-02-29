@@ -12,11 +12,8 @@ async def on_message(message):
         # Start a loop to continuously ask the user for new questions until a timeout occurs
         while True:
             try:
-                # Prompt the user to ask another question; they can return even after a timeout
-                await message.channel.send("Would you like to ask another question? You can return even after a timeout.")
-                
                 # Receive a new question from the user
-                new_question_response = await Bot.wait_for('message', check=lambda m: m.author == message.author and m.channel == message.channel, timeout=10)
+                new_question_response = await Bot.wait_for('message', check=lambda m: m.author == message.author and m.channel == message.channel, timeout=20)
 
                 # Send the user's question to ChatGPT and retrieve the response
                 new_question = new_question_response.content
